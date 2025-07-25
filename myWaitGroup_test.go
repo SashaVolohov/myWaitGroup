@@ -2,44 +2,53 @@ package myWaitGroup
 
 import (
 	"fmt"
+	"sync"
 	"testing"
-	"time"
 )
 
-func worker(id int) {
-	fmt.Printf("Worker %d is starting\n", id)
+func worker(integer *int, integerMutex *sync.Mutex) {
+	integerMutex.Lock()
+	defer integerMutex.Unlock()
 
-	time.Sleep(time.Second)
-	fmt.Printf("Worker %d is done\n", id)
+	*integer++
 }
 
 func TestMyWaitGroup(t *testing.T) {
 
 	var myWg MyWaitGroup
+	var integer int
+	var integerMutex sync.Mutex
 
-	for i := 1; i <= 5; i++ {
+	const firstIterationsCount = 5
+	const secondIterationsCount = 10
+
+	for i := 1; i <= firstIterationsCount; i++ {
 		myWg.Add(1)
 
 		go func() {
 			defer myWg.Done()
-			worker(i)
+			worker(&integer, &integerMutex)
 		}()
 
 	}
 
 	myWg.Wait()
 
-	for i := 5; i <= 10; i++ {
+	for i := 1; i <= secondIterationsCount; i++ {
 		myWg.Add(1)
 
 		go func() {
 			defer myWg.Done()
-			worker(i)
+			worker(&integer, &integerMutex)
 		}()
 
 	}
 
 	myWg.Wait()
 
-	fmt.Printf("Looks like the test was passed.")
+	if integer != (firstIterationsCount + secondIterationsCount) {
+		t.Errorf("An error has occurred during passes the test: integer want to %d, but have %d", (firstIterationsCount + secondIterationsCount), integer)
+	}
+
+	fmt.Printf("Looks like the test was passed.\n")
 }
