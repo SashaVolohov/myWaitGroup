@@ -1,0 +1,18 @@
+mode: set
+github.com/SashaVolohov/myWaitGroup/myWaitGroup.go:23.38,27.35 2 1
+github.com/SashaVolohov/myWaitGroup/myWaitGroup.go:27.35,28.60 1 0
+github.com/SashaVolohov/myWaitGroup/myWaitGroup.go:31.2,32.18 2 1
+github.com/SashaVolohov/myWaitGroup/myWaitGroup.go:32.18,33.52 1 0
+github.com/SashaVolohov/myWaitGroup/myWaitGroup.go:36.2,36.19 1 1
+github.com/SashaVolohov/myWaitGroup/myWaitGroup.go:36.19,38.7 1 1
+github.com/SashaVolohov/myWaitGroup/myWaitGroup.go:38.7,41.19 2 1
+github.com/SashaVolohov/myWaitGroup/myWaitGroup.go:41.19,43.5 1 1
+github.com/SashaVolohov/myWaitGroup/myWaitGroup.go:45.4,47.65 2 1
+github.com/SashaVolohov/myWaitGroup/myWaitGroup.go:47.65,50.5 2 1
+github.com/SashaVolohov/myWaitGroup/myWaitGroup.go:58.30,60.2 1 1
+github.com/SashaVolohov/myWaitGroup/myWaitGroup.go:62.30,66.6 2 1
+github.com/SashaVolohov/myWaitGroup/myWaitGroup.go:66.6,71.85 3 1
+github.com/SashaVolohov/myWaitGroup/myWaitGroup.go:71.85,72.9 1 1
+github.com/SashaVolohov/myWaitGroup/myWaitGroup.go:77.2,81.6 3 1
+github.com/SashaVolohov/myWaitGroup/myWaitGroup.go:81.6,84.82 2 1
+github.com/SashaVolohov/myWaitGroup/myWaitGroup.go:84.82,86.4 1 1
